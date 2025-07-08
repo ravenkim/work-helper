@@ -8,9 +8,17 @@ interface WhLayoutProps {
 
 const WhLayout = ({ children }: WhLayoutProps) => {
     return (
-        <div>
+        <div
+            className={'w-dvw h-dvh flex flex-col '}
+        >
             <WhHeader />
-            {children}
+            <div className="w-full h-[calc(100dvh-65px)]">
+
+                {children}
+
+            </div>
+
+
         </div>
     )
 }
