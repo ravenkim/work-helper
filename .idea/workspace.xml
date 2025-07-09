@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92a99599-5b38-4470-bdaf-b2b683784709" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/src/styles/base.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/colors.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/variables.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/colors.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/colors.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
