@@ -1,0 +1,9 @@
+@layer utilities {
+    :root {
+        /*
+         layout.tsx 에서 만들어 주고 있기에 여기에 정의 할 필요는 없지만
+         만약 추가로 css 에서 변수로 사용이 필요할 경우 여기에 한번 더 정의해서 오류를 없애주면 됩니다.
+         */
+        --font-pretendard: 'Pretendard Variable', sans-serif;
+    }
+}
