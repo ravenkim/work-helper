@@ -1,0 +1,7 @@
+
+/*
+폰트를 layout 에서 추가해 주고 있음
+todo - next local font 를 써서 퍼블릭에서 불러오는 방법이 있는지 > 있다면  src/assets/fonts/ 를 public 폴더에 옮기기 , 안된다면 이유는?
+지금 - layout 에서 추가해 준것을 theme 에서 테일윈드로 정의해주고 base 에서 적용중 font 만 css 따로 빼는것이 좋은지?
+*/
+

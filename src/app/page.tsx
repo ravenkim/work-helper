@@ -13,23 +13,10 @@ export default function Home() {
           priority
         />
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left ">
-
-          <li  className="tracking-[-.01em] font-[family-name:var(--font-geist-mono)]">
+          <li className="tracking-[-.01em] ">
             Save and see your changes instantly.zzzzzzzzzzzzzz
           </li>
-          <li className="tracking-[-.01em]   p  ">
-            Save and see your changes instantly.zzzzzzzzzzzzzz
-          </li>
-          <li className="tracking-[-.01em]  font-geist-mono  ">
-            Save and see your changes instantly.zzzzzzzzzzzzzz
-          </li>
-          <li className="tracking-[-.01em] font-sans">
-            Save and see your changes instantly.zzzzzzzzzzzzzz
-          </li>
-          <li className="tracking-[-.01em] font-[family-name:var(--font-geist-sans)]">
-            Save and see your changes instantly.zzzzzzzzzzzzzz
-          </li>
-          <li className="tracking-[-.01em]">
+          <li className="tracking-[-.01em] font-bold">
             Save and see your changes instantly.zzzzzzzzzzzzzz
           </li>
         </ol>

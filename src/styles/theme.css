@@ -1,9 +1,10 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+    --font-pretendard: 'Pretendard Variable', Pretendard;
+
     --color-background: var(--background);
     --color-foreground: var(--foreground);
-    --font-pretendard: 'Pretendard Variable', Pretendard;
 
     --color-card: var(--card);
     --color-card-foreground: var(--card-foreground);
