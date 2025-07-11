@@ -1,4 +1,4 @@
-import { AsyncRequest, reduxMaker } from '../reduxMaker'
+import { AsyncRequest, reduxMaker } from '../../core/store/reduxMaker'
 import { PayloadAction } from '@reduxjs/toolkit'
 
 const prefix = 'sample'

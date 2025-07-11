@@ -1,14 +1,14 @@
 'use client'
 
 import { useAppDispatch, useAppSelector } from '../core/store/hooks'
-import { sampleActions } from '../core/store/sample/sampleReducer'
+import { sampleActions } from '../features/sample/sampleReducer'
 
 export default function Home() {
   const dispatch = useAppDispatch()
   const { value, pokemon, test } = useAppSelector((state) => state.sampleReducer)
 
   const handleDecrement = () => {
-    dispatch(sampleActions.decrement())
+    dispatch(sampleActions.decrement({}))
   }
 
   const handleSetValue = () => {
@@ -16,7 +16,7 @@ export default function Home() {
   }
 
   const handleGetPokemon = () => {
-    dispatch(sampleActions.getPokemon())
+    dispatch(sampleActions.getPokemon({}))
   }
 
   const handleGetTest = () => {

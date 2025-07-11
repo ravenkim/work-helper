@@ -4,7 +4,7 @@ import { all } from 'redux-saga/effects'
 
 // Reducer들을 여기에 import할 예정
 // import { routerSaga, routerSlice } from './router/routerReducer'
-import { sampleSlice, sampleSaga } from './sample/sampleReducer'
+import { sampleSlice, sampleSaga } from '@/features/sample/sampleReducer'
 // import { themeSlice } from '../shared/components/theme/themeReducer'
 
 const reducers = {
