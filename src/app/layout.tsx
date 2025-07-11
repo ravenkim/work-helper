@@ -4,6 +4,7 @@ import "./index.css";
 
 import React from 'react'
 import localFont from "next/font/local";
+import { StoreProvider } from "@/core/store/StoreProvider";
 
 //폰트 추가
 const pretendard = localFont({
@@ -30,7 +31,9 @@ export default function RootLayout({
       <body
         className={` ${pretendard.variable} antialiased`}
       >
-        {children}
+        <StoreProvider>
+          {children}
+        </StoreProvider>
       </body>
     </html>
   );
