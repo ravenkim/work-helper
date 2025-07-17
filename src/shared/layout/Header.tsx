@@ -2,10 +2,10 @@
 
 const Header = () => {
     return (
-        <header className="flex h-[65px] items-center justify-between border-b border-solid border-b-[#e7edf4] px-10 py-3 whitespace-nowrap">
+        <header className="border-b-border flex h-[65px] items-center justify-between border-b border-solid px-10 py-3 whitespace-nowrap">
             <div className="flex items-center gap-8">
-                <div className="flex items-center gap-4 text-[#0d151c]">
-                    제목
+                <div className="text-foreground text-[32px] font-bold flex items-center gap-4">
+                    Work Helper
                 </div>
                 <div className="flex items-center gap-9">
                     {/*  메뉴 생기면*/}

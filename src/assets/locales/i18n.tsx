@@ -12,8 +12,7 @@ const resources = {
     en: { translation: enTranslation },
 }
 
-i18n
-    .use(LanguageDetector)
+i18n.use(LanguageDetector)
     .use(initReactI18next)
     .init({
         resources,

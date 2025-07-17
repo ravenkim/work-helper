@@ -10,7 +10,6 @@ import { StoreProvider } from '@/global/redux/StoreProvider'
 import QueryProvider from '@/global/tanstackQuery/QueryProvider'
 import { ToastContainer } from 'react-toastify'
 
-
 //폰트 추가
 const pretendard = localFont({
     src: '../assets/fonts/PretendardVariable.woff2',
@@ -31,7 +30,7 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" className={'dark'}>
             <body className={` ${pretendard.variable} antialiased`}>
                 <QueryProvider>
                     <StoreProvider>
