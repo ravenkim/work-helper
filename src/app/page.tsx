@@ -1,10 +1,13 @@
 import WhLayout from '@/shared/layout/WhLayout'
-import SiteCategoryAccordion from '@/features/sites/SiteCategoryAccordion'
+import SitesServer from '@/features/sites/Sites.server'
 
 export default function Home() {
+
+
+
     return (
         <WhLayout>
-            <SiteCategoryAccordion />
+            <SitesServer />
         </WhLayout>
     )
 }

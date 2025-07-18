@@ -29,10 +29,20 @@ export const category = [
                             },
                         ],
                     },
+
                     {
-                        name: '추천 블로그 / Recommended Blogs',
-                        id: 'fe-blog',
+                        name: 'UI 라이브러리 / UI Libraries',
+                        id: 'fe-ui-lib',
                     },
+                    {
+                        name: '개발 도구 / Tooling',
+                        id: 'fe-tool',
+                    },
+                    {
+                        name: '배포 플랫폼 / Deployment',
+                        id: 'fe-deploy',
+                    },
+
                 ],
             },
             {
@@ -74,6 +84,14 @@ export const category = [
                         id: 'cloud-doc',
                     },
                 ],
+            },
+            {
+                name: '대기업 블로그 / Big Tech Blogs',
+                id: 'big-tech-blog',
+            },
+            {
+                name: '추천 블로그 / Recommended Blogs',
+                id: 'recommended-blog',
             },
         ],
     },

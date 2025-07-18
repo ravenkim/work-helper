@@ -1,13 +1,15 @@
 import React from 'react'
 import { Accordion } from '@/shared/lib/shadcn/components/ui/accordion'
-import CategoryAccordion from '@/features/sites/CategoryAccordion'
-import category from '@/features/sites/constants/category'
-import { sites as sitesList } from '@/features/sites/constants/sites'
-import { getUrlMetadata } from '@/features/sites/getUrlMetadata'
+import CategoryAccordion from '@/features/sites/components/CategoryAccordion'
+import category from '@/features/sites/data/category'
+import { allSites } from '@/features/sites/data/sites'
+import { getUrlMetadata } from '@/shared/utils/api/getUrlMetadata'
 
-const SiteCategoryAccordion = async  () => {
+
+const SitesServer = async () => {
+
     const data = category
-    const sites = sitesList
+    const sites = allSites
 
 
     // Fetch metadata for each site
@@ -29,6 +31,8 @@ const SiteCategoryAccordion = async  () => {
         return <div>데이터를 불러오는 중입니다...</div>;
     }
 
+
+
     return (
         <div className={'flex w-full flex-col items-center'}>
             <div className={'w-[80%]'}>
@@ -43,4 +47,5 @@ const SiteCategoryAccordion = async  () => {
         </div>
     )
 }
-export default SiteCategoryAccordion
+
+export default SitesServer

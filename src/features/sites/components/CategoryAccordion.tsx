@@ -5,9 +5,9 @@ import {
     AccordionContent,
     AccordionTrigger,
 } from '@/shared/lib/shadcn/components/ui/accordion'
-import React from 'react'
+import React, { useState } from 'react'
 
-import { Category, Site } from '@/features/sites/type'
+import { Category, Site } from '@/features/sites/types/type'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/shared/lib/shadcn/components/ui/card'
 import { Badge } from '@/shared/lib/shadcn/components/ui/badge'
 
@@ -16,6 +16,8 @@ const CategoryAccordion: React.FC<{
     sites: Site[]
     depth?: number
 }> = ({ categories, sites, depth = 0 }) => {
+
+
 
     return (
         <>
