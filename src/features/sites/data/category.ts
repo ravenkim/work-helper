@@ -1,4 +1,5 @@
 export const category = [
+
     {
         name: '개발 / Development',
         id: 'dev',
@@ -27,6 +28,29 @@ export const category = [
                                 name: '차트 / Chart',
                                 id: 'fe-package-chart',
                             },
+                            // 상태관리 라이브러리 추가
+                            {
+                                name: '상태관리 / State Management',
+                                id: 'fe-package-state',
+                                children: [
+                                    {
+                                        name: 'Redux',
+                                        id: 'fe-package-state-redux',
+                                    },
+                                    {
+                                        name: 'Jotai',
+                                        id: 'fe-package-state-jotai',
+                                    },
+                                    {
+                                        name: 'Recoil',
+                                        id: 'fe-package-state-recoil',
+                                    },
+                                    {
+                                        name: 'Zustand',
+                                        id: 'fe-package-state-zustand',
+                                    },
+                                ],
+                            },
                         ],
                     },
 
@@ -42,7 +66,6 @@ export const category = [
                         name: '배포 플랫폼 / Deployment',
                         id: 'fe-deploy',
                     },
-
                 ],
             },
             {

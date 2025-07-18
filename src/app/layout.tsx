@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 
 import './index.css'
 
-
 import React from 'react'
 import localFont from 'next/font/local'
 import { StoreProvider } from '@/global/redux/StoreProvider'
