@@ -1,5 +1,4 @@
 export const category = [
-
     {
         name: '개발 / Development',
         id: 'dev',

@@ -4,7 +4,7 @@ import category from '@/features/sites/data/category'
 import { allSites as staticAllSites } from '@/features/sites/data/sites' // allSites 데이터 불러오기
 import SitesClient from '@/features/sites/Sites.client'
 import { getUrlMetadata } from '@/shared/utils/api/getUrlMetadata' // getUrlMetadata 불러오기
-import { Site, Category } from '@/features/sites/types/type' // Site, Category 타입
+import { Category, Site } from '@/features/sites/types/type' // Site, Category 타입
 
 // 카테고리 트리에서 id 순서 배열 만들기
 function getCategoryOrder(categories: Category[]): string[] {

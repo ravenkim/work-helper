@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect, useRef, useCallback } from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import { Accordion } from '@/shared/lib/shadcn/components/ui/accordion'
 import CategoryAccordion from '@/features/sites/components/CategoryAccordion'
 import { Category, Site } from '@/features/sites/types/type'

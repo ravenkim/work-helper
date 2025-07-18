@@ -1,5 +1,5 @@
 // features/sites/api/useInfiniteSiteQuery.ts
-import { useState, useEffect, useCallback } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { Site } from '@/features/sites/types/type' // Site 타입을 가져옵니다.
 // allSites 데이터를 직접 가져오지 않습니다.
 

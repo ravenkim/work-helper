@@ -2,8 +2,8 @@
 'use client'
 
 import {
-    AccordionItem,
     AccordionContent,
+    AccordionItem,
     AccordionTrigger,
 } from '@/shared/lib/shadcn/components/ui/accordion'
 import React from 'react'
@@ -18,7 +18,7 @@ import {
     CardTitle,
 } from '@/shared/lib/shadcn/components/ui/card'
 import { Badge } from '@/shared/lib/shadcn/components/ui/badge'
-import { Link as LinkIcon, Github } from 'lucide-react'
+import { Github, Link as LinkIcon } from 'lucide-react'
 
 const CategoryAccordion: React.FC<{
     categories: Category[]

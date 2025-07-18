@@ -1,10 +1,4 @@
-import {
-    createSlice,
-    PayloadAction,
-    ReducersMapObject,
-    Slice,
-    SliceCaseReducers,
-} from '@reduxjs/toolkit'
+import { createSlice, Slice, SliceCaseReducers } from '@reduxjs/toolkit'
 import { call, put, takeLatest } from 'redux-saga/effects'
 import { AnyAction, SagaIterator } from 'redux-saga'
 
