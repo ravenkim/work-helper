@@ -36,7 +36,7 @@ const SitesServer = async () => {
     );
 
     // 정렬, 필터링, 페이지네이션은 여전히 SitesClient에서 처리하되,
-    // SitesClient가 이 메타데이터가 포함된 전체 사이트 목록을 받도록 합니다.
+    // SitesClient가 이 메타데이터가 포함된 전체 사이트 목록을 받음
     return (
         <SitesClient categories={categoriesData} initialSites={sitesWithMetadata} />
     );

@@ -7,7 +7,6 @@ import {
     AccordionTrigger,
 } from '@/shared/lib/shadcn/components/ui/accordion'
 import React from 'react'
-import Image from 'next/image'
 
 import { Category, Site } from '@/features/sites/types/type'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/shared/lib/shadcn/components/ui/card'
@@ -68,8 +67,6 @@ const CategoryAccordion: React.FC<{
                                                     style={{ objectFit: 'contain', width: '100%', height: '100%' }}
                                                     // Image 쓰면 도메인 관리 해줘야함
                                                 />
-
-
                                             </div>
                                         )}
 
@@ -139,6 +136,7 @@ const CategoryAccordion: React.FC<{
                                     }}
                                 >
                                     이 카테고리에는 등록된 사이트가 없습니다.
+                                    보이면 안됨 이미 재귀적으로 없애주고 있음
                                 </p>
                             )}
                         </AccordionContent>

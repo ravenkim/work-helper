@@ -1,11 +1,10 @@
-// features/sites/Sites.client.tsx
 'use client';
 
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Accordion } from '@/shared/lib/shadcn/components/ui/accordion';
 import CategoryAccordion from '@/features/sites/components/CategoryAccordion';
 import { Category, Site } from '@/features/sites/types/type';
-import { useInfiniteSiteQuery } from './api/useInfiniteSiteQuery'; // 변경 필요
+import { useInfiniteSiteQuery } from './api/useInfiniteSiteQuery';
 import { Input } from '@/shared/lib/shadcn/components/ui/input';
 import { Checkbox } from '@/shared/lib/shadcn/components/ui/checkbox';
 import { Label } from '@/shared/lib/shadcn/components/ui/label';
@@ -14,7 +13,7 @@ import { Loader2 } from 'lucide-react';
 
 interface SitesClientProps {
     categories: Category[];
-    initialSites: Site[]; // 서버에서 가져온 초기 사이트 데이터
+    initialSites: Site[];
 }
 
 const SitesClient: React.FC<SitesClientProps> = ({ categories, initialSites }) => {
@@ -23,7 +22,6 @@ const SitesClient: React.FC<SitesClientProps> = ({ categories, initialSites }) =
     const [searchTerm, setSearchTerm] = useState('');
     const [debouncedSearchTerm, setDebouncedSearchTerm] = useState('');
 
-    // useInfiniteSiteQuery에 initialSites를 전달하도록 변경
     const {
         data,
         fetchNextPage,
@@ -97,7 +95,7 @@ const SitesClient: React.FC<SitesClientProps> = ({ categories, initialSites }) =
             });
         };
 
-        // 깊은 복사본을 생성하고 필터링합니다.
+        // 깊은 복사본을 생성하고 필터링
         const clonedCategories: Category[] = JSON.parse(JSON.stringify(allCats));
         return filterCategoriesRecursive(clonedCategories);
     }, []);
@@ -154,7 +152,6 @@ const SitesClient: React.FC<SitesClientProps> = ({ categories, initialSites }) =
                     className="w-full"
                     suppressHydrationWarning
                 >
-                    {/* 이 부분은 이미 filteredCategories || [] 로 되어있어 문제가 없어야 합니다. */}
                     <CategoryAccordion categories={filteredCategories || []} sites={allSites} />
                 </Accordion>
 
