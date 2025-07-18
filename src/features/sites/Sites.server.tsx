@@ -1,51 +1,45 @@
-import React from 'react'
-import { Accordion } from '@/shared/lib/shadcn/components/ui/accordion'
-import CategoryAccordion from '@/features/sites/components/CategoryAccordion'
-import category from '@/features/sites/data/category'
-import { allSites } from '@/features/sites/data/sites'
-import { getUrlMetadata } from '@/shared/utils/api/getUrlMetadata'
-
+// features/sites/SitesServer.tsx
+import React from 'react';
+import category from '@/features/sites/data/category';
+import { allSites as staticAllSites } from '@/features/sites/data/sites'; // allSites 데이터 불러오기
+import SitesClient from '@/features/sites/Sites.client';
+import { getUrlMetadata } from '@/shared/utils/api/getUrlMetadata'; // getUrlMetadata 불러오기
+import { Site } from '@/features/sites/types/type'; // Site 타입
 
 const SitesServer = async () => {
+    const categoriesData = category;
 
-    const data = category
-    const sites = allSites
+    if (!categoriesData || categoriesData.length === 0) {
+        return <div>카테고리 데이터를 불러오는 중입니다...</div>;
+    }
 
-
-    // Fetch metadata for each site
+    // 모든 사이트에 대해 메타데이터를 미리 가져옵니다.
     const sitesWithMetadata = await Promise.all(
-        sites.map(async (site) => {
-            const metadata = await getUrlMetadata(site.url);
-            console.log(metadata)
-            return {
-                ...site,
-                imageUrl: metadata.imageUrl || '',
-                name: metadata.name || site.name,
-                description: metadata.description || site.description,
-                labels: metadata.keywords || site.labels,
-            };
+        staticAllSites.map(async (site) => {
+            try {
+                const metadata = await getUrlMetadata(site.url);
+                return {
+                    ...site,
+                    imageUrl: metadata.imageUrl || site.imageUrl || null,
+                    name: metadata.name || site.name,
+                    description: metadata.description || site.description,
+                    labels: Array.from(new Set([...metadata.keywords, ...site.labels])), // 키워드와 기존 라벨 합치기
+                } as Site; // 명시적으로 Site 타입 지정
+            } catch (error) {
+                console.error(`Error fetching metadata for ${site.url}:`, error);
+                return {
+                    ...site,
+                    imageUrl: site.imageUrl || null,
+                } as Site;
+            }
         })
     );
 
-    if (!data || data.length === 0 || !sitesWithMetadata) {
-        return <div>데이터를 불러오는 중입니다...</div>;
-    }
-
-
-
+    // 정렬, 필터링, 페이지네이션은 여전히 SitesClient에서 처리하되,
+    // SitesClient가 이 메타데이터가 포함된 전체 사이트 목록을 받도록 합니다.
     return (
-        <div className={'flex w-full flex-col items-center'}>
-            <div className={'w-[80%]'}>
-                <Accordion
-                    type="multiple"
-                    className="w-full"
-                    suppressHydrationWarning
-                >
-                    <CategoryAccordion categories={data} sites={sitesWithMetadata} />
-                </Accordion>
-            </div>
-        </div>
-    )
-}
+        <SitesClient categories={categoriesData} initialSites={sitesWithMetadata} />
+    );
+};
 
-export default SitesServer
+export default SitesServer;

@@ -1,3 +1,4 @@
+// features/sites/components/CategoryAccordion.tsx
 'use client'
 
 import {
@@ -5,7 +6,8 @@ import {
     AccordionContent,
     AccordionTrigger,
 } from '@/shared/lib/shadcn/components/ui/accordion'
-import React, { useState } from 'react'
+import React from 'react'
+import Image from 'next/image'
 
 import { Category, Site } from '@/features/sites/types/type'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/shared/lib/shadcn/components/ui/card'
@@ -17,39 +19,65 @@ const CategoryAccordion: React.FC<{
     depth?: number
 }> = ({ categories, sites, depth = 0 }) => {
 
+    // 현재 카테고리에 직접 연결된 사이트 필터링
+    const currentCategorySites = (categoryId: string) =>
+        sites.filter((site) => site.category === categoryId);
 
+
+    const hasVisibleContent = (category: Category): boolean => {
+        const sitesInCategory = currentCategorySites(category.id);
+        if (sitesInCategory.length > 0) return true;
+        if (!category.children) return false;
+        return category.children.some(child => hasVisibleContent(child));
+    };
 
     return (
         <>
-            {categories.map((category) => (
-                <AccordionItem key={category.id} value={category.id}>
-                    {/* 아코디언 트리거 (헤더) 부분 */}
-                    <AccordionTrigger
-                        style={{ paddingLeft: `${16 + depth * 8}px` }}
-                    >
-                        {category.name}
-                    </AccordionTrigger>
+            {categories.map((category) => {
+                const sitesInCurrentCategory = currentCategorySites(category.id);
+                const hasChildren = category.children && category.children.length > 0;
 
-                    {/* 아코디언 콘텐츠 (내용) 부분 */}
-                    <AccordionContent
-                        style={{ paddingLeft: `${16 + (depth+1) * 8}px` }}
-                    >
-                        {/* 해당 카테고리에 속하는 사이트 목록 */}
-                        {sites
-                            .filter((site) => site.category === category.id)
-                            .map((site) => (
+                const visible = sitesInCurrentCategory.length > 0 || hasVisibleContent(category);
+                if (!visible && depth > 0) {
+                    return null;
+                }
+
+                return (
+                    <AccordionItem key={category.id} value={category.id}>
+                        <AccordionTrigger
+                            style={{ paddingLeft: `${16 + depth * 8}px` }}
+                        >
+                            {category.name}
+                        </AccordionTrigger>
+
+                        <AccordionContent
+                            style={{ paddingLeft: `${16 + (depth + 1) * 8}px` }}
+                        >
+                            {/* 해당 카테고리에 속하는 사이트 목록 */}
+                            {sitesInCurrentCategory.map((site) => (
                                 <Card key={site.url} className="mb-4 overflow-hidden rounded-lg shadow-sm px-8">
                                     <div className="grid grid-cols-[180px_1fr] md:grid-cols-[220px_1fr] gap-0">
-                                        {/* 이미지 섹션 */}
-                                        <div className="relative h-full w-full">
-                                            <img
-                                                src={site.imageUrl || '/placeholder.jpg'}
-                                                alt={site.name}
-                                                className="h-full w-full object-contain"
-                                            />
-                                            {/* 이미지 위에 레이블을 오버레이하고 싶다면 여기에 배치할 수 있습니다. */}
-                                        </div>
+                                        {/* 이미지 섹션 (site.imageUrl이 있을 때만 렌더링) */}
+                                        {site.imageUrl && (
+                                            <div className="relative h-full w-full">
+                                                <img
+                                                    src={site.imageUrl}
+                                                    alt={site.name}
+                                                    loading="lazy"
+                                                    decoding="async"
+                                                    style={{ objectFit: 'contain', width: '100%', height: '100%' }}
+                                                    // Image 쓰면 도메인 관리 해줘야함
+                                                />
 
+
+                                            </div>
+                                        )}
+
+                                        {!site.imageUrl && (
+                                            <div className="relative h-full w-full bg-gray-100 flex justify-center items-center">
+                                                <span className="text-gray-400 text-sm">No Image </span>
+                                            </div>
+                                        )}
                                         {/* 콘텐츠 섹션 */}
                                         <div className="flex flex-col pl-6">
                                             <CardHeader className="p-0 mb-2">
@@ -68,7 +96,7 @@ const CategoryAccordion: React.FC<{
                                                     target="_blank"
                                                     rel="noopener noreferrer"
                                                     className="block text-sm text-blue-600 hover:underline truncate"
-                                                    title={site.url} // 마우스 오버 시 전체 URL 표시
+                                                    title={site.url}
                                                 >
                                                     {site.url}
                                                 </a>
@@ -89,38 +117,36 @@ const CategoryAccordion: React.FC<{
                                 </Card>
                             ))}
 
-                        {/* 하위 카테고리가 있을 경우 재귀적으로 렌더링 */}
-                        {category.children && category.children.length > 0 && (
-                            <div
-                                style={{ paddingLeft: `${16 + depth * 16}px` }}
-                            >
-                                <CategoryAccordion
-                                    categories={category.children}
-                                    sites={sites}
-                                    depth={depth + 1}
-                                />
-                            </div>
-                        )}
+                            {/* 하위 카테고리가 있을 경우 재귀적으로 렌더링 */}
+                            {hasChildren && (
+                                <div
+                                    style={{ paddingLeft: `${0}px` }} // 여기서 다시 depth에 따라 조절되므로 0으로 설정
+                                >
+                                    <CategoryAccordion
+                                        categories={category.children!}
+                                        sites={sites}
+                                        depth={depth + 1}
+                                    />
+                                </div>
+                            )}
 
-                        {/* 해당 카테고리에 사이트나 하위 카테고리가 없을 때 메시지 */}
-                        {sites.filter((site) => site.category === category.id)
-                            .length === 0 &&
-                            (!category.children ||
-                                category.children.length === 0) && (
+                            {/* 해당 카테고리에 사이트나 하위 카테고리가 없을 때 메시지 */}
+                            {sitesInCurrentCategory.length === 0 && !hasChildren && (
                                 <p
                                     style={{
-                                        marginLeft: `${32 + depth * 16}px`,
+                                        marginLeft: `${0}px`, // 이미 상위 AccordionContent에서 패딩이 적용되므로 0으로 설정
                                         color: '#666',
                                     }}
                                 >
                                     이 카테고리에는 등록된 사이트가 없습니다.
                                 </p>
                             )}
-                    </AccordionContent>
-                </AccordionItem>
-            ))}
+                        </AccordionContent>
+                    </AccordionItem>
+                );
+            })}
         </>
     )
 }
 
-export default CategoryAccordion
+export default CategoryAccordion;
