@@ -4,6 +4,9 @@ import { HOUR } from '@/shared/constants/time'
 export async function getUrlMetadata(url: string) {
     try {
         const response = await fetch(url, {
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (compatible; MyBot/1.0)',
+            },
             next: { revalidate: 24 * HOUR },
         })
         const html = await response.text()
