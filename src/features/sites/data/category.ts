@@ -149,6 +149,7 @@ export const category = [
         name: 'AI / AI',
         id: 'ai',
         children: [
+
             {
                 name: '디자인 / Design',
                 id: 'ai-design',
@@ -162,8 +163,12 @@ export const category = [
                 id: 'ai-local',
             },
             {
-                name: 'AI 생산성 / AI Productivity',
-                id: 'ai-productivity',
+                name: '코딩 / AI coding',
+                id: 'ai-coding',
+            },
+            {
+                name: '문서 / AI Doc',
+                id: 'ai-doc',
             },
         ],
     },
