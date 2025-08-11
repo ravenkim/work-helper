@@ -193,7 +193,6 @@ src/
       Sites.server.tsx         # 서버에서 데이터 가공/전달
       api/
         useInfiniteSiteQuery.ts # 클라이언트 무한스크롤/필터 로직
-        route.ts                # API 방식(선택)
 ```
 
 ---

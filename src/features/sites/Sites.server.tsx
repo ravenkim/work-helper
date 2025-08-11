@@ -69,7 +69,6 @@ const SitesServer = async () => {
             }
         }),
     )
-    console.log(sitesWithMetadata)
     // 카테고리 트리 순서에 맞게 사이트 정렬
     const sortedSites = sortSitesByCategoryOrder(
         sitesWithMetadata,

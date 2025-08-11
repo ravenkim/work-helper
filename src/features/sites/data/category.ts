@@ -161,6 +161,10 @@ export const category = [
                 name: '로컬 실행 / Local Execution',
                 id: 'ai-local',
             },
+            {
+                name: 'AI 생산성 / AI Productivity',
+                id: 'ai-productivity',
+            },
         ],
     },
 ]
