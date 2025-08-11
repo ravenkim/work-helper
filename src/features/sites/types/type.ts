@@ -1,5 +1,4 @@
 export interface Site {
-
     name: string
     language: string[]
     url: string

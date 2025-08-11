@@ -133,7 +133,8 @@ export const allSites = [
         git: 'https://github.com/pmndrs/zustand',
         imageUrl: '',
         name: 'Zustand',
-        description: '간단하고 직관적인 API를 제공하는 React 상태관리 라이브러리입니다.',
+        description:
+            '간단하고 직관적인 API를 제공하는 React 상태관리 라이브러리입니다.',
         labels: ['상태관리', 'Zustand', 'React'],
         language: ['en'],
         ownerPick: false,
@@ -146,7 +147,8 @@ export const allSites = [
         git: '',
         imageUrl: '',
         name: 'FL Chart App',
-        description: '간단한 라인 차트 등 다양한 차트를 지원하는 웹 기반 차트 툴.',
+        description:
+            '간단한 라인 차트 등 다양한 차트를 지원하는 웹 기반 차트 툴.',
         labels: ['차트', '시각화', '무료'],
         language: ['en'],
         ownerPick: false,
@@ -182,7 +184,8 @@ export const allSites = [
         git: '',
         imageUrl: '',
         name: 'nivo',
-        description: '풍부한 차트 타입과 테마를 제공하는 React 차트 라이브러리.',
+        description:
+            '풍부한 차트 타입과 테마를 제공하는 React 차트 라이브러리.',
         labels: ['차트', 'React', '무료'],
         language: ['en'],
         ownerPick: false,
@@ -218,7 +221,8 @@ export const allSites = [
         git: 'https://github.com/frappe/charts',
         imageUrl: '',
         name: 'Frappe Charts',
-        description: 'Zero dependencies, modern SVG 차트 라이브러리 (바 차트 등 지원).',
+        description:
+            'Zero dependencies, modern SVG 차트 라이브러리 (바 차트 등 지원).',
         labels: ['차트', 'SVG', '무료'],
         language: ['en'],
         ownerPick: false,
@@ -290,7 +294,8 @@ export const allSites = [
         git: '',
         imageUrl: '',
         name: 'vizzu-lib',
-        description: '애니메이션 데이터 시각화 및 데이터 스토리텔링 라이브러리.',
+        description:
+            '애니메이션 데이터 시각화 및 데이터 스토리텔링 라이브러리.',
         labels: ['차트', '애니메이션', '무료'],
         language: ['en'],
         ownerPick: false,
@@ -375,7 +380,8 @@ export const allSites = [
         git: '',
         imageUrl: '',
         name: 'amCharts',
-        description: '다양한 차트와 맵을 지원하는 상용 데이터 시각화 라이브러리.',
+        description:
+            '다양한 차트와 맵을 지원하는 상용 데이터 시각화 라이브러리.',
         labels: ['차트', '유료', '맵'],
         language: ['en'],
         ownerPick: false,

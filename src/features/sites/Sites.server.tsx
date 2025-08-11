@@ -50,8 +50,12 @@ const SitesServer = async () => {
                 return {
                     ...site,
                     imageUrl: metadata.imageUrl || site.imageUrl || null,
-                    name: metadata.name || site.name,
-                    description: metadata.description || site.description,
+                    name:
+                        metadata.name === site.name
+                            ? site.name
+                            : `${site.name}[${metadata.name}]`,
+                    description: site.description || null,
+                    metaDescription: metadata.description || null,
                     labels: Array.from(
                         new Set([...metadata.keywords, ...site.labels]),
                     ), // 키워드와 기존 라벨 합치기
@@ -65,7 +69,7 @@ const SitesServer = async () => {
             }
         }),
     )
-
+    console.log(sitesWithMetadata)
     // 카테고리 트리 순서에 맞게 사이트 정렬
     const sortedSites = sortSitesByCategoryOrder(
         sitesWithMetadata,
