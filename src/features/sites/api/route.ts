@@ -54,8 +54,12 @@ export async function GET(request: Request) {
                 return {
                     ...site,
                     imageUrl: metadata.imageUrl || site.imageUrl || null, // 메타데이터가 없으면 기존값 또는 기본값
-                    name: metadata.name || site.name,
-                    description: metadata.description || site.description,
+                    name:
+                        metadata.name === site.name
+                            ? site.name
+                            : `${site.name}[${metadata.name}]`,
+                    description: site.description || null,
+                    metaDescription: metadata.description || null,
                     labels: Array.from(
                         new Set([...metadata.keywords, ...site.labels]),
                     ),

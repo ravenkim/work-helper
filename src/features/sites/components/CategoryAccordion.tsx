@@ -36,10 +36,12 @@ const CategoryAccordion: React.FC<{
         return category.children.some((child) => hasVisibleContent(child))
     }
 
+
     return (
         <>
             {categories.map((category) => {
                 const sitesInCurrentCategory = currentCategorySites(category.id)
+                console.log(sitesInCurrentCategory)
                 const hasChildren =
                     category.children && category.children.length > 0
 
@@ -100,9 +102,14 @@ const CategoryAccordion: React.FC<{
                                                 <CardTitle className="text-lg leading-tight font-semibold md:text-xl">
                                                     {site.name}
                                                 </CardTitle>
-                                                <CardDescription className="text-muted-foreground line-clamp-2 text-sm md:line-clamp-3">
+                                                {site.description && <CardDescription className="text-muted-foreground line-clamp-2 text-sm md:line-clamp-3">
                                                     {site.description}
-                                                </CardDescription>
+
+                                                </CardDescription>}
+                                                {site.metaDescription && <CardDescription className="text-muted-foreground line-clamp-2 text-sm md:line-clamp-3">
+                                                    {site.metaDescription}
+
+                                                </CardDescription>}
                                             </CardHeader>
 
                                             <CardContent className="flex-grow p-0">
