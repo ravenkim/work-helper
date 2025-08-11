@@ -53,7 +53,7 @@ const SitesServer = async () => {
                     name:
                         metadata.name === site.name
                             ? site.name
-                            : `${site.name}[${metadata.name}]`,
+                            : (metadata.name ? `${site.name}[${metadata.name}]` : site.name),
                     description: site.description || null,
                     metaDescription: metadata.description || null,
                     labels: Array.from(
