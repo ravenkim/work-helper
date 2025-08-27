@@ -18,7 +18,7 @@ const ITEMS_PER_PAGE = 5 // 한 번에 불러올 아이템 수
 export const useInfiniteSiteQuery = (
     initialSites: Site[], // 서버에서 받은 전체 사이트 데이터
     ownerPick: boolean,
-    ceoPick: boolean,
+    userPick: boolean,
     searchTerm: string,
 ): UseInfiniteSiteQueryReturn => {
     const [data, setData] = useState<Site[]>([])
@@ -35,8 +35,8 @@ export const useInfiniteSiteQuery = (
         if (ownerPick) {
             filtered = filtered.filter((site) => site.ownerPick)
         }
-        if (ceoPick) {
-            filtered = filtered.filter((site) => site.ceoPick)
+        if (userPick) {
+            filtered = filtered.filter((site) => site.userPick)
         }
         if (searchTerm) {
             const lowerCaseSearchTerm = searchTerm.toLowerCase()
@@ -52,7 +52,7 @@ export const useInfiniteSiteQuery = (
             )
         }
         return filtered
-    }, [initialSites, ownerPick, ceoPick, searchTerm])
+    }, [initialSites, ownerPick, userPick, searchTerm])
 
     const fetchData = useCallback(async () => {
         setIsLoading(true)

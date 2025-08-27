@@ -76,7 +76,7 @@ src/features/sites/data/sites.ts
   labels: ['태그1', '태그2'],
   language: ['ko', 'en'],
   ownerPick: false,
-  ceoPick: false,
+  userPick: false,
 }
 ```
 
@@ -93,7 +93,7 @@ src/features/sites/data/sites.ts
   labels: ['Material UI', '디자인 시스템', '컴포넌트'],
   language: ['en'],
   ownerPick: false,
-  ceoPick: false,
+  userPick: false,
 }
 ```
 
@@ -153,7 +153,7 @@ interface Site {
     labels: string[]
     category: string
     ownerPick: boolean
-    ceoPick: boolean
+    userPick: boolean
     imageUrl?: string
 }
 ```

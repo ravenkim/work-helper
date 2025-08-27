@@ -14,7 +14,7 @@ export const allSites = [
 
 
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
      */
 
@@ -29,7 +29,7 @@ export const allSites = [
         labels: ['애니메이션', '디자인', '패키지'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: true,
+        userPick: true,
     },
     {
         category: 'fe-ui-lib',
@@ -42,7 +42,7 @@ export const allSites = [
         labels: ['UI', '컴포넌트', 'Tailwind', 'Radix'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-tool',
@@ -55,7 +55,7 @@ export const allSites = [
         labels: ['번들러', '개발 도구', '빠름'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-deploy',
@@ -68,7 +68,7 @@ export const allSites = [
         labels: ['호스팅', '정적 사이트', '배포'],
         language: ['ko', 'en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-ui-lib',
@@ -81,7 +81,7 @@ export const allSites = [
         labels: ['Material UI', '디자인 시스템', '컴포넌트'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
 
     // Redux
@@ -96,7 +96,7 @@ export const allSites = [
         labels: ['상태관리', 'Redux', 'React'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     // Jotai
     {
@@ -110,7 +110,7 @@ export const allSites = [
         labels: ['상태관리', 'Jotai', 'React'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     // Recoil
     {
@@ -124,7 +124,7 @@ export const allSites = [
         labels: ['상태관리', 'Recoil', 'React'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     // Zustand
     {
@@ -138,7 +138,7 @@ export const allSites = [
         labels: ['상태관리', 'Zustand', 'React'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     // JS 시각화 차트 라이브러리 (무료)
     {
@@ -152,7 +152,7 @@ export const allSites = [
         labels: ['차트', '시각화', '무료'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -164,7 +164,7 @@ export const allSites = [
         labels: ['차트', 'React', 'Chart.js', '무료'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -176,7 +176,7 @@ export const allSites = [
         labels: ['차트', 'React', '무료'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -189,7 +189,7 @@ export const allSites = [
         labels: ['차트', 'React', '무료'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -201,7 +201,7 @@ export const allSites = [
         labels: ['차트', 'xkcd', '무료'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -213,7 +213,7 @@ export const allSites = [
         labels: ['차트', '시각화', '무료'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -226,7 +226,7 @@ export const allSites = [
         labels: ['차트', 'SVG', '무료'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -238,7 +238,7 @@ export const allSites = [
         labels: ['차트', 'JavaScript', '무료'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -250,7 +250,7 @@ export const allSites = [
         labels: ['차트', 'CSS', '무료'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -262,7 +262,7 @@ export const allSites = [
         labels: ['차트', '네이버', '무료'],
         language: ['ko', 'en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -274,7 +274,7 @@ export const allSites = [
         labels: ['차트', 'Angular', '무료'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -286,7 +286,7 @@ export const allSites = [
         labels: ['차트', 'React', '무료'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -299,7 +299,7 @@ export const allSites = [
         labels: ['차트', '애니메이션', '무료'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -311,7 +311,7 @@ export const allSites = [
         labels: ['차트', 'React', '무료'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -323,7 +323,7 @@ export const allSites = [
         labels: ['차트', 'React', '무료'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -335,7 +335,7 @@ export const allSites = [
         labels: ['차트', 'D3', '무료'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -347,7 +347,7 @@ export const allSites = [
         labels: ['차트', 'jQuery', '무료'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -359,7 +359,7 @@ export const allSites = [
         labels: ['차트', 'Apache', '무료'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -371,7 +371,7 @@ export const allSites = [
         labels: ['차트', 'Airbnb', '무료'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     // JS 시각화 차트 라이브러리 (유료)
     {
@@ -385,7 +385,7 @@ export const allSites = [
         labels: ['차트', '유료', '맵'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -397,7 +397,7 @@ export const allSites = [
         labels: ['차트', '유료'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -409,7 +409,7 @@ export const allSites = [
         labels: ['차트', '유료', '국산'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -421,7 +421,7 @@ export const allSites = [
         labels: ['차트', '유료', '국산'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -433,7 +433,7 @@ export const allSites = [
         labels: ['차트', '유료', '다중프레임워크'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'fe-package-chart',
@@ -445,7 +445,7 @@ export const allSites = [
         labels: ['차트', '유료', 'ZK'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     // 대기업 기술 블로그
     {
@@ -458,7 +458,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '우아한형제들'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -470,7 +470,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '카카오'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -482,7 +482,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '카카오페이'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -494,7 +494,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '쿠팡'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -506,7 +506,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '왓챠'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -518,7 +518,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '토스'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -530,7 +530,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '컬리'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -542,7 +542,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '뱅크샐러드'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -554,7 +554,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '올리브영'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -566,7 +566,7 @@ export const allSites = [
         labels: ['대기업', '블로그', 'NHN'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -578,7 +578,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '하이퍼커넥트'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -590,7 +590,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '당근마켓'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -602,7 +602,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '강남언니'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -614,7 +614,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '요기요'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -626,7 +626,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '플랫팜'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -638,7 +638,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '스포카'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -650,7 +650,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '라인'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -662,7 +662,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '쏘카'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -674,7 +674,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '리디'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -686,7 +686,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '펫프렌즈'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -698,7 +698,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '네이버'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -710,7 +710,7 @@ export const allSites = [
         labels: ['대기업', '블로그', 'AWS'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -722,7 +722,7 @@ export const allSites = [
         labels: ['대기업', '블로그', '라포랩스'],
         language: ['ko'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     // 해외
     {
@@ -735,7 +735,7 @@ export const allSites = [
         labels: ['글로벌', '블로그', 'Meta'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -747,7 +747,7 @@ export const allSites = [
         labels: ['글로벌', '블로그', 'Amazon'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -759,7 +759,7 @@ export const allSites = [
         labels: ['글로벌', '블로그', 'Apple'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -771,7 +771,7 @@ export const allSites = [
         labels: ['글로벌', '블로그', 'Netflix'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -783,7 +783,7 @@ export const allSites = [
         labels: ['글로벌', '블로그', 'Google'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -795,7 +795,7 @@ export const allSites = [
         labels: ['글로벌', '블로그', 'Linkedin'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -807,7 +807,7 @@ export const allSites = [
         labels: ['글로벌', '블로그', 'Slack'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -819,7 +819,7 @@ export const allSites = [
         labels: ['글로벌', '블로그', 'Airbnb'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -831,7 +831,7 @@ export const allSites = [
         labels: ['글로벌', '블로그', 'Zoom'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -843,7 +843,7 @@ export const allSites = [
         labels: ['글로벌', '블로그', 'RiotGames'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -855,7 +855,7 @@ export const allSites = [
         labels: ['글로벌', '블로그', 'Pinterest'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -867,7 +867,7 @@ export const allSites = [
         labels: ['글로벌', '블로그', 'PayPal'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -879,7 +879,7 @@ export const allSites = [
         labels: ['글로벌', '블로그', 'Ebay'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -891,7 +891,7 @@ export const allSites = [
         labels: ['글로벌', '블로그', 'Twitter'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -903,7 +903,7 @@ export const allSites = [
         labels: ['글로벌', '블로그', 'GooglePlay'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -915,7 +915,7 @@ export const allSites = [
         labels: ['글로벌', '블로그', 'Dropbox'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -927,7 +927,7 @@ export const allSites = [
         labels: ['글로벌', '블로그', 'Spotify'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: 'big-tech-blog',
@@ -939,7 +939,7 @@ export const allSites = [
         labels: ['글로벌', '블로그', 'Github'],
         language: ['en'],
         ownerPick: false,
-        ceoPick: false,
+        userPick: false,
     },
     {
         category: "ai-chat",
@@ -951,7 +951,7 @@ export const allSites = [
         labels: ["글로벌", "검색", "질문응답"],
         language: ["en"],
         ownerPick: false,
-        ceoPick: false
+        userPick: false
     },
     {
         category: "ai-chat",
@@ -963,7 +963,7 @@ export const allSites = [
         labels: ["한국어", "챗봇", "콘텐츠"],
         language: ["ko"],
         ownerPick: false,
-        ceoPick: false
+        userPick: false
     },
     {
         category: "ai-doc",
@@ -975,7 +975,7 @@ export const allSites = [
         labels: ["아이디어", "브레인스토밍"],
         language: ["en"],
         ownerPick: false,
-        ceoPick: false
+        userPick: false
     },
     {
         category: "ai-chat",
@@ -987,7 +987,7 @@ export const allSites = [
         labels: ["글로벌", "챗봇"],
         language: ["en"],
         ownerPick: false,
-        ceoPick: false
+        userPick: false
     },
     {
         category: "ai-chat",
@@ -999,7 +999,7 @@ export const allSites = [
         labels: ["글로벌", "챗봇"],
         language: ["en", "ko"],
         ownerPick: false,
-        ceoPick: false
+        userPick: false
     },
     {
         category: "ai-coding",
@@ -1011,7 +1011,7 @@ export const allSites = [
         labels: ["코딩", "IDE", "AI 보조"],
         language: ["en"],
         ownerPick: false,
-        ceoPick: false
+        userPick: false
     },
     {
         category: "ai-design",
@@ -1023,7 +1023,7 @@ export const allSites = [
         labels: ["요약", "회의", "구글"],
         language: ["en"],
         ownerPick: false,
-        ceoPick: false
+        userPick: false
     },
     {
         category: "ai-doc",
@@ -1035,6 +1035,6 @@ export const allSites = [
         labels: ["콘텐츠", "생산성", "글쓰기"],
         language: ["en"],
         ownerPick: false,
-        ceoPick: false
+        userPick: false
     }
 ]

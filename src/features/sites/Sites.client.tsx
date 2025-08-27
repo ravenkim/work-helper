@@ -21,7 +21,7 @@ const SitesClient: React.FC<SitesClientProps> = ({
     initialSites,
 }) => {
     const [ownerPick, setOwnerPick] = useState(false)
-    const [ceoPick, setCeoPick] = useState(false)
+    const [userPick, setuserPick] = useState(false)
     const [searchTerm, setSearchTerm] = useState('')
     const [debouncedSearchTerm, setDebouncedSearchTerm] = useState('')
     const [accordionValues, setAccordionValues] = useState<string[]>([])
@@ -42,7 +42,7 @@ const SitesClient: React.FC<SitesClientProps> = ({
     } = useInfiniteSiteQuery(
         initialSites,
         ownerPick,
-        ceoPick,
+        userPick,
         debouncedSearchTerm,
     )
 
@@ -62,7 +62,7 @@ const SitesClient: React.FC<SitesClientProps> = ({
     // 필터 또는 검색어 변경 시 데이터 다시 불러오기
     useEffect(() => {
         refetch()
-    }, [debouncedSearchTerm, ownerPick, ceoPick, refetch])
+    }, [debouncedSearchTerm, ownerPick, userPick, refetch])
 
     // Intersection Observer를 사용하여 무한 스크롤 구현
     const observerTarget = useRef<HTMLDivElement | null>(null)
@@ -197,13 +197,13 @@ const SitesClient: React.FC<SitesClientProps> = ({
                     </div>
                     <div className="flex items-center space-x-2">
                         <Checkbox
-                            id="ceoPick"
-                            checked={ceoPick}
+                            id="userPick"
+                            checked={userPick}
                             onCheckedChange={(checked: boolean) =>
-                                setCeoPick(checked)
+                                setuserPick(checked)
                             }
                         />
-                        <Label htmlFor="ceoPick">CEO Pick</Label>
+                        <Label htmlFor="userPick">User Pick</Label>
                     </div>
                     <Input
                         type="text"

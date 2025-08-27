@@ -8,7 +8,7 @@ export interface Site {
     labels: string[]
     category: string
     ownerPick: boolean
-    ceoPick: boolean
+    userPick: boolean
     imageUrl?: string
 }
 
