@@ -1,7 +1,7 @@
 import * as cheerio from 'cheerio'
 import { HOUR } from '@/shared/constants/time'
 import { unstable_cache } from 'next/cache'
-
+import NoImage from '@/assets/images/no-image.svg'
 
 export const getUrlMetadata = unstable_cache(
     async (url: string) => {
@@ -30,6 +30,7 @@ export const getUrlMetadata = unstable_cache(
             const favicon =
                 $('link[rel="icon"]').attr('href') ||
                 $('link[rel="shortcut icon"]').attr('href')
+            const faviconUrl = favicon ? new URL(favicon, url).href : null
             const ogUrl = $('meta[property="og:url"]').attr('content')
             const ogType = $('meta[property="og:type"]').attr('content')
             const ogSiteName = $('meta[property="og:site_name"]').attr(
@@ -39,17 +40,18 @@ export const getUrlMetadata = unstable_cache(
             const robots = $('meta[name="robots"]').attr('content')
 
             return {
-                imageUrl: ogImage || twitterImage || null,
+                imageUrl:
+                    ogImage || twitterImage || faviconUrl || NoImage.src,
                 name: ogTitle || $('title').text() || null,
                 description:
-                    ogDescription ||
+                    ogImage || ogDescription ||
                     $('meta[name="description"]').attr('content') ||
                     null,
                 keywords: keywords
                     ? keywords.split(',').map((kw) => kw.trim())
                     : [],
                 canonicalUrl: canonicalUrl || null,
-                favicon: favicon ? new URL(favicon, url).href : null,
+                favicon: faviconUrl,
                 ogUrl: ogUrl || null,
                 ogType: ogType || null,
                 ogSiteName: ogSiteName || null,
@@ -60,13 +62,13 @@ export const getUrlMetadata = unstable_cache(
         } catch (error) {
             console.error(`Failed to fetch metadata for ${url}:`, error)
             return {
-                imageUrl: null,
-                name: null,
-                description: null,
+                imageUrl: NoImage.src,
+                name: url,
+                description: 'Failed to fetch metadata',
                 keywords: [],
-                canonicalUrl: null,
-                favicon: null,
-                ogUrl: null,
+                canonicalUrl: url,
+                favicon: NoImage.src,
+                ogUrl: url,
                 ogType: null,
                 ogSiteName: null,
                 twitterCard: null,
