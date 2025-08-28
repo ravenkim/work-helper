@@ -1,7 +1,5 @@
-// features/sites/api/useInfiniteSiteQuery.ts
 import { useCallback, useEffect, useState } from 'react'
 import { Site } from '@/features/sites/types/type' // Site 타입을 가져옵니다.
-// allSites 데이터를 직접 가져오지 않습니다.
 
 interface UseInfiniteSiteQueryReturn {
     data: Site[]
@@ -54,23 +52,25 @@ export const useInfiniteSiteQuery = (
         return filtered
     }, [initialSites, ownerPick, userPick, searchTerm])
 
-    const fetchData = useCallback(async () => {
-        setIsLoading(true)
-        setIsError(false)
-        setPage(0) // 검색/필터 변경 시 페이지 초기화
-
-        try {
-            const filteredSites = getFilteredAndSortedSites()
-            const initialData = filteredSites.slice(0, ITEMS_PER_PAGE)
-            setData(initialData)
-            setHasNextPage(filteredSites.length > ITEMS_PER_PAGE)
-        } catch (err) {
-            console.error('Failed to fetch sites:', err)
-            setIsError(true)
-        } finally {
-            setIsLoading(false)
+    const fetchData = useCallback(() => {
+        const run = async () => {
+            setIsLoading(true)
+            setIsError(false)
+            setPage(0)
+            try {
+                const filteredSites = getFilteredAndSortedSites()
+                const initialData = filteredSites.slice(0, ITEMS_PER_PAGE)
+                setData(initialData)
+                setHasNextPage(filteredSites.length > ITEMS_PER_PAGE)
+            } catch (err) {
+                console.error('Failed to fetch sites:', err)
+                setIsError(true)
+            } finally {
+                setIsLoading(false)
+            }
         }
-    }, [getFilteredAndSortedSites]) // 의존성 추가
+        void run()
+    }, [getFilteredAndSortedSites])
 
     const fetchNextPage = useCallback(async () => {
         if (!hasNextPage || isFetchingNextPage) return

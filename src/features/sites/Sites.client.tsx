@@ -68,7 +68,8 @@ const SitesClient: React.FC<SitesClientProps> = ({
     const observerTarget = useRef<HTMLDivElement | null>(null)
 
     useEffect(() => {
-        if (!observerTarget.current) return
+        const target = observerTarget.current
+        if (!target) return
 
         const observer = new IntersectionObserver(
             (entries) => {
@@ -83,12 +84,10 @@ const SitesClient: React.FC<SitesClientProps> = ({
             { threshold: 1 },
         )
 
-        observer.observe(observerTarget.current)
+        observer.observe(target)
 
         return () => {
-            if (observerTarget.current) {
-                observer.unobserve(observerTarget.current)
-            }
+            observer.unobserve(target)
         }
     }, [hasNextPage, isFetchingNextPage, fetchNextPage])
 

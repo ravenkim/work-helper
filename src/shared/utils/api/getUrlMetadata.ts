@@ -2,6 +2,7 @@ import * as cheerio from 'cheerio'
 import { HOUR } from '@/shared/constants/time'
 import { unstable_cache } from 'next/cache'
 
+
 export const getUrlMetadata = unstable_cache(
     async (url: string) => {
         try {
@@ -16,6 +17,10 @@ export const getUrlMetadata = unstable_cache(
             const $ = cheerio.load(html)
 
             const ogImage = $('meta[property="og:image"]').attr('content')
+            const twitterImage = $('meta[name="twitter:image"]').attr('content')
+
+
+
             const ogTitle = $('meta[property="og:title"]').attr('content')
             const ogDescription = $('meta[property="og:description"]').attr(
                 'content',
@@ -31,7 +36,6 @@ export const getUrlMetadata = unstable_cache(
                 'content',
             )
             const twitterCard = $('meta[name="twitter:card"]').attr('content')
-            const twitterImage = $('meta[name="twitter:image"]').attr('content')
             const robots = $('meta[name="robots"]').attr('content')
 
             return {

@@ -49,7 +49,7 @@ const SitesServer = async () => {
                 const metadata = await getUrlMetadata(site.url)
                 return {
                     ...site,
-                    imageUrl: metadata.imageUrl || site.imageUrl || null,
+                    imageUrl: site.imageUrl || metadata.imageUrl || null,
                     name:
                         metadata.name === site.name
                             ? site.name

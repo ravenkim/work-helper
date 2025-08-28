@@ -61,18 +61,16 @@ const CategoryAccordion: React.FC<{
                         <AccordionContent
                             style={{ paddingLeft: `${16 + (depth + 1) * 8}px` }}
                         >
-                            {/* 해당 카테고리에 속하는 사이트 목록 */}
                             {sitesInCurrentCategory.map((site) => (
                                 <Card
                                     key={site.url}
                                     className="mb-4 overflow-hidden rounded-lg px-8 shadow-sm"
                                 >
                                     <div className="grid grid-cols-[180px_1fr] gap-0 md:grid-cols-[220px_1fr]">
-                                        {/* 이미지 섹션 (site.imageUrl이 있을 때만 렌더링) */}
                                         {site.imageUrl && (
                                             <div className="relative h-full w-full">
-                                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                                 {/* 도메인 이슈로 next/image 사용 불가 */}
+                                                {/* eslint-disable-next-line @next/next/no-img-element */}
                                                 <img
                                                     src={site.imageUrl}
                                                     alt={site.name}
@@ -184,7 +182,7 @@ const CategoryAccordion: React.FC<{
                                 !hasChildren && (
                                     <p
                                         style={{
-                                            marginLeft: `${0}px`, // 이미 상위 AccordionContent에서 패딩이 적용되므로 0으로 설정
+                                            marginLeft: `${0}px`,
                                             color: '#666',
                                         }}
                                     >

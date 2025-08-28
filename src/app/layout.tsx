@@ -1,12 +1,7 @@
 import type { Metadata } from 'next'
-
 import './index.css'
-
 import React from 'react'
 import localFont from 'next/font/local'
-import { StoreProvider } from '@/global/redux/StoreProvider'
-import QueryProvider from '@/global/tanstackQuery/QueryProvider'
-import { ToastContainer } from 'react-toastify'
 
 //폰트 추가
 const pretendard = localFont({
@@ -30,12 +25,7 @@ export default function RootLayout({
     return (
         <html lang="en" className={'dark'}>
             <body className={` ${pretendard.variable} antialiased`}>
-                <QueryProvider>
-                    <StoreProvider>
                         {children}
-                        <ToastContainer />
-                    </StoreProvider>
-                </QueryProvider>
             </body>
         </html>
     )
