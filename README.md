@@ -1,5 +1,8 @@
 # Work Helper
 
+카테고리와 url 만 있으면 나머지는 자동 수집!!! 
+
+
 ## ✨ 소개
 
 ** Work Helper**는 직원들을을 위한 다양한 추천 사이트를 카테고리별로 한눈에 탐색할 수 있는 웹 서비스입니다.
@@ -199,10 +202,45 @@ src/
 
 문의/기여 환영합니다! 🎉
 
+---
+
+## 🤝 기여 방법 (Contributing)
+
+이 프로젝트에 기여하고 싶으시다면, Pull Request를 통해 참여하실 수 있습니다. 아래의 절차를 따라주세요.
+
+1.  **리포지토리 Fork 하기**
+    - 이 리포지토리를 자신의 GitHub 계정으로 Fork 하세요.
+
+2.  **새로운 브랜치 생성**
+    - 새로운 기능 추가나 버그 수정을 위한 브랜치를 생성합니다.
+    ```bash
+    git checkout -b feature/YourFeatureName
+    ```
+
+3.  **코드 수정**
+    - 원하는 기능을 추가하거나 버그를 수정합니다.
+
+4.  **변경 사항 커밋**
+    - 수정한 내용을 커밋합니다. 명확한 메시지를 작성해주세요.
+    ```bash
+    git commit -m 'Feat: Add some amazing feature'
+    ```
+
+5.  **브랜치에 Push**
+    - 생성한 브랜치에 변경 사항을 Push 합니다.
+    ```bash
+    git push origin feature/YourFeatureName
+    ```
+
+6.  **Pull Request 생성**
+    - GitHub에서 Fork한 리포지토리로 이동하여, `main` 브랜치로 향하는 Pull Request를 생성합니다.
+
+---
+
 남은 할거 목록
 
 - 테마 적용
 - lint staged 적용
 - 허스키 적용
-- app > page > 라우팅, 테이터 미리 받아옴
 - 언어 설정 적용
+- 이미지 안나오는 케이스 확인후 수정 (아마도 사이트에서 잘못 설정한 경우)

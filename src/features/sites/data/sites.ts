@@ -290,7 +290,7 @@ export const allSites = [
     },
     {
         category: 'fe-package-chart',
-        url: 'https://lib.vizzuhq.com/latest/',
+        url: 'https://lib.vizzuhq.com',
         git: '',
         imageUrl: '',
         name: 'vizzu-lib',

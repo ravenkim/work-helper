@@ -1,7 +1,6 @@
 import * as cheerio from 'cheerio'
 import { HOUR } from '@/shared/constants/time'
 import { unstable_cache } from 'next/cache'
-import NoImage from '@/assets/images/no-image.svg'
 
 export const getUrlMetadata = unstable_cache(
     async (url: string) => {
@@ -18,8 +17,6 @@ export const getUrlMetadata = unstable_cache(
 
             const ogImage = $('meta[property="og:image"]').attr('content')
             const twitterImage = $('meta[name="twitter:image"]').attr('content')
-
-
 
             const ogTitle = $('meta[property="og:title"]').attr('content')
             const ogDescription = $('meta[property="og:description"]').attr(
@@ -41,10 +38,10 @@ export const getUrlMetadata = unstable_cache(
 
             return {
                 imageUrl:
-                    ogImage || twitterImage || faviconUrl || NoImage.src,
+                    ogImage || twitterImage ,
                 name: ogTitle || $('title').text() || null,
                 description:
-                    ogImage || ogDescription ||
+                   ogDescription ||
                     $('meta[name="description"]').attr('content') ||
                     null,
                 keywords: keywords
@@ -62,12 +59,12 @@ export const getUrlMetadata = unstable_cache(
         } catch (error) {
             console.error(`Failed to fetch metadata for ${url}:`, error)
             return {
-                imageUrl: NoImage.src,
+                imageUrl: null,
                 name: url,
                 description: 'Failed to fetch metadata',
                 keywords: [],
                 canonicalUrl: url,
-                favicon: NoImage.src,
+                favicon: null,
                 ogUrl: url,
                 ogType: null,
                 ogSiteName: null,

@@ -5,6 +5,8 @@ import { allSites as staticAllSites } from '@/features/sites/data/sites' // allS
 import SitesClient from '@/features/sites/Sites.client'
 import { getUrlMetadata } from '@/shared/utils/api/getUrlMetadata' // getUrlMetadata 불러오기
 import { Category, Site } from '@/features/sites/types/type' // Site, Category 타입
+import NoImage from '@/assets/images/no-image.svg'
+
 
 // 카테고리 트리에서 id 순서 배열 만들기
 function getCategoryOrder(categories: Category[]): string[] {
@@ -49,7 +51,7 @@ const SitesServer = async () => {
                 const metadata = await getUrlMetadata(site.url)
                 return {
                     ...site,
-                    imageUrl: site.imageUrl || metadata.imageUrl || null,
+                    imageUrl: site.imageUrl || metadata.imageUrl || metadata.favicon || NoImage.src,
                     name:
                         metadata.name === site.name
                             ? site.name
