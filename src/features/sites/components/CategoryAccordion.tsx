@@ -59,16 +59,16 @@ const CategoryAccordion: React.FC<{
                         </AccordionTrigger>
 
                         <AccordionContent
-                            style={{ paddingLeft: `${16 + (depth + 1) * 8}px` }}
+                            className={`px-4 md:pl-[${16 + (depth + 1) * 8}px]`}
                         >
                             {sitesInCurrentCategory.map((site) => (
                                 <Card
                                     key={site.url}
-                                    className="mb-4 overflow-hidden rounded-lg px-8 shadow-sm"
+                                    className="mb-4 overflow-hidden rounded-lg px-4 md:px-8 shadow-sm"
                                 >
-                                    <div className="grid grid-cols-[180px_1fr] gap-0 md:grid-cols-[220px_1fr]">
+                                    <div className="grid grid-cols-1 gap-0 md:grid-cols-[220px_1fr]">
                                         {site.imageUrl && (
-                                            <div className="relative h-full w-full">
+                                            <div className="relative h-[180px] w-full md:h-full md:w-[220px]">
                                                 {/* 도메인 이슈로 next/image 사용 불가 */}
                                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                                 <img
@@ -86,7 +86,7 @@ const CategoryAccordion: React.FC<{
                                         )}
 
                                         {!site.imageUrl && (
-                                            <div className="relative flex h-full w-full items-center justify-center bg-gray-100">
+                                            <div className="relative flex h-[180px] w-full items-center justify-center bg-gray-100 md:h-full md:w-[220px]">
                                                 <span className="text-sm text-gray-400">
                                                     No Image{' '}
                                                 </span>

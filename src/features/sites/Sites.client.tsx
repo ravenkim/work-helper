@@ -181,8 +181,8 @@ const SitesClient: React.FC<SitesClientProps> = ({
     }
 
     return (
-        <div className={'flex w-full flex-col items-center'}>
-            <div className={'w-[80%] p-4'}>
+        <div className={'flex w-full flex-col items-center px-4'}>
+            <div className={'w-full md:w-[80%]'}>
                 <div className="mb-6 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
                     <div className="flex items-center space-x-2">
                         <Checkbox
